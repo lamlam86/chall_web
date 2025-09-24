@@ -9,15 +9,11 @@ def index():
     cmd = ""
     if request.method == "POST":
         cmd = request.form.get("cmd", "")
-
-        # Chặn input dài hơn 4 ký tự
         if len(cmd) > 4:
             output = "bạn muốn làm hacker ???"
         else:
             try:
-                # Thực thi command, lấy raw bytes
                 result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-                # Decode, bỏ qua ký tự không hợp lệ
                 output = result.stdout.decode("utf-8", errors="ignore")
                 if not output.strip():
                     output = "(không có output)"

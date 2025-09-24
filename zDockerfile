@@ -12,11 +12,12 @@ COPY d_flag_o_day_ne.txt /d_flag_o_day_ne.txt
 
 # Cài dependencies
 RUN pip install --no-cache-dir -r requirements.txt \
-    && chmod 777 /d_flag_o_day_ne.txt \
+    && chmod +x /d_flag_o_day_ne.txt \
     && rm -f /app/Dockerfile
 
     # Copy Dockerfile vào container nhưng đổi tên
 COPY Dockerfile /zDockerfile
+
 
 # Expose port 7000
 EXPOSE 7000
