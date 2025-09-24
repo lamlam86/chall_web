@@ -7,23 +7,12 @@
 </head>
 <body>
   <main class="container">
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <h1>helloOS Command Injection Challenge</h1>
-    <p>Nhập lệnh bên dưới để thử!</p>
-=======
     <h1>Input Output</h1>
     <h3>Nhập vào đây xem điều bất ngờ</h3>
->>>>>>> b3d7453 (123)
-=======
-    <h1>Input Output</h1>
-    <h3>Nhập vào đây xem điều bất ngờ</h3>
->>>>>>> b3d745374a444481d43975251a4ec21455e9c7b8
     <form method="POST">
       <input type="text" name="cmd" placeholder="Nhập command..." value="{{ cmd }}" required />
       <button type="submit">Chạy</button>
     </form>
-
     {% if output %}
       <div class="result">
         <h2>Kết quả:</h2>
