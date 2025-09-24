@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>CTF — OS Command Injection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Input Output</h1>
+    <h3>Nhập vào đây xem điều bất ngờ</h3>
+    <form method="POST">
+      <input type="text" name="cmd" placeholder="Nhập command..." value="{{ cmd }}" required />
+      <button type="submit">Chạy</button>
+    </form>
+
+    {% if output %}
+      <div class="result">
+        <h2>Kết quả:</h2>
+        <pre>{{ output }}</pre>
+      </div>
+    {% endif %}
+  </main>
+</body>
+</html>
