@@ -21,7 +21,7 @@ ALLOWED = {
     ".dockerignore",
     ".git",
     "README.md",
-
+    
 }
 
 def cleaner():
