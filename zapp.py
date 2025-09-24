@@ -20,10 +20,8 @@ ALLOWED = {
     "Dockerfile",
     ".dockerignore",
     ".git",
-<<<<<<< HEAD
     "README.md",
-=======
->>>>>>> b3d745374a444481d43975251a4ec21455e9c7b8
+
 }
 
 def cleaner():
@@ -41,10 +39,6 @@ def cleaner():
                 except Exception as e:
                     print(f"[Cleaner] Không xóa được {f}: {e}")
         time.sleep(20)
-<<<<<<< HEAD
-=======
-
->>>>>>> b3d745374a444481d43975251a4ec21455e9c7b8
 threading.Thread(target=cleaner, daemon=True).start()
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -52,12 +46,6 @@ def index():
     cmd = ""
     if request.method == "POST":
         cmd = request.form.get("cmd", "")
-<<<<<<< HEAD
-        if len(cmd) > 4:
-            output = "bạn muốn làm hacker ???"
-=======
->>>>>>> b3d745374a444481d43975251a4ec21455e9c7b8
-
         if len(cmd) > 4:
             output = "bạn muốn làm hacker ???"
         elif any(bad in cmd for bad in BLACKLIST):
